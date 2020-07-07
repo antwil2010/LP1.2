@@ -122,6 +122,8 @@ int main(){
         Conta c;
         a.numero = 52634;
         a.titular.nome = "João Cleber";
+        a.agencia.nome = "Itau";
+        a.agencia.numeroDaAgencia = "54321-5";
         a.saldo = 10000;
         a.limite = 20000;
         c.numero = 52635;
@@ -129,12 +131,13 @@ int main(){
         c.saldo = 4000;
         c.limite = 10000;
         double valor;
-        int escolha2 = 4;
+        int escolha2 = 5;
         while(escolha2 != 0){
             cout << "Digite a ação que quer fazer: " << endl;
             cout << "1-para sacar" << endl;
             cout << "2-para depositar" << endl;
             cout << "3-para transferir" << endl;
+            cout << "4-para mostrar a agencia e o numero da agencia" << endl;
             cout << "0-para fechar o programa" << endl;
             cin >> escolha2;
             if(escolha2 == 1){
@@ -167,6 +170,8 @@ int main(){
                 } else{
                     a.transfere(valor, c);
                 }
+            } else if(escolha2 == 4){
+                cout << a.agencia.nome << "\n" << a.agencia.numeroDaAgencia << endl;
             } else if(escolha2 != 0){
                 cout << "Opção inválida, tente novamente!" << endl;
             }

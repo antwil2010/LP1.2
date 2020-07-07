@@ -5,6 +5,7 @@
 #ifndef PROF_SAMUEL_CONTA_H
 #define PROF_SAMUEL_CONTA_H
 #include "cliente.h"
+#include "agencia.h"
 
 using namespace std;
 
@@ -12,6 +13,7 @@ class Conta{
 public:
     int numero;
     Cliente titular;
+    Agencia agencia;
     double saldo;
     double limite;
 

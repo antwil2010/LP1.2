@@ -12,6 +12,7 @@ using namespace std;
 class Cliente{
 public:
     string nome;
+    string cpf;
 };
 
 #endif //PROF_SAMUEL_CLIENTE_H
