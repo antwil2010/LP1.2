@@ -17,6 +17,11 @@ class Carro{
     int ligado;
     int marcha;
     int tanque;
+    static int quantidadeCarros;
+
+    Carro(string& tipo);
+    Carro();
+    ~Carro();
 
     void liga(int ligado);
     void acelera(int velocidade);

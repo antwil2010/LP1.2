@@ -16,6 +16,11 @@ public:
     Agencia agencia;
     double saldo;
     double limite;
+    static int quantidadeContas;
+
+    Conta(Cliente& titular);
+    Conta();
+    ~Conta();
 
     void saca(double valor);
     void deposita(double valor);

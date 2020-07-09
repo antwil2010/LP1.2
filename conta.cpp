@@ -3,6 +3,19 @@
 //
 #include "conta.h"
 
+int Conta::quantidadeContas;
+
+Conta::Conta(Cliente &titular): titular(titular){
+    this->quantidadeContas += 1;
+}
+
+Conta::Conta(){
+    this->quantidadeContas += 1;
+}
+
+Conta::~Conta(){
+}
+
 void Conta::saca(double valor){
     this->saldo -= valor;
 }

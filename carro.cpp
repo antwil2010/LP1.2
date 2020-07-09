@@ -6,6 +6,19 @@
 
 using namespace std;
 
+int Carro::quantidadeCarros;
+
+Carro::Carro(string& tipo): tipo(tipo){
+    this->quantidadeCarros += 1;
+}
+
+Carro::Carro(){
+    this->quantidadeCarros +=1;
+}
+
+Carro::~Carro(){
+}
+
 void Carro::liga(int ligado){
     this->ligado = 1;
 }

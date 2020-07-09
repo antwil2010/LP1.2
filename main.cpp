@@ -14,9 +14,9 @@ int main(){
     cin >> escolha;
     if(escolha == 1){
         int escolha2 = 7;
-        Carro c;
+        string tipo = "Sedan";
+        Carro c(tipo);
         Motor c1;
-        c.tipo = "Sedan";
         c.numPortas = 4;
         c.placa = "XYZ-0102";
         c.velocidade = 0;
@@ -24,15 +24,12 @@ int main(){
         c.marcha = 0;
         c.tanque = 100;
         c1.oleo = 10;
-        /*cout << "Tipo de carro: " << c.tipo << endl;
-        cout << "Quantidade de portas: " << c.numPortas << endl;
-        cout << "Placa do carro: " << c.placa << endl;
-        c.acelera(50);
-        cout << "A velocidade atual é: " << c.velocidade << "KM/H" << endl;
-        c.freia (20);
-        cout << "A velocidade atual é: " << c.velocidade << "KM/H" << endl;*/
         while(escolha2 != 0){
             cout << "Digite a ação que quer fazer: " << endl;
+            cout << "Características do carro: " << endl;
+            cout << c.tipo << endl;
+            cout << c.numPortas << endl;
+            cout << c.placa << "Porta(s)" << endl;
             cout << "1-para ligar o carro" << endl;
             cout << "2-para acelerar o carro" << endl;
             cout << "3-para freiar o carro" << endl;
@@ -118,21 +115,31 @@ int main(){
         }
     } else if(escolha == 2){
         cout << "Bem-vindo ao banco" << endl;
-        Conta a;
-        Conta c;
+        Cliente clC;
+        Cliente clD;
+        clC.nome = "João";
+        clD.nome = "Maria";
+        Conta a(clC);
+        Conta c(clD);
+        Conta e(c);
+        cout << "Titular da conta C: " << a.titular.nome << endl;
+        cout << "Titular da conta D: " << c.titular.nome << endl;
+        cout << "Titular da conta E: " << e.titular.nome << endl;
         a.numero = 52634;
-        a.titular.nome = "João Cleber";
         a.agencia.nome = "Itau";
         a.agencia.numeroDaAgencia = "54321-5";
         a.saldo = 10000;
         a.limite = 20000;
         c.numero = 52635;
-        c.titular.nome = "Carlos Alves";
+        c.agencia.nome = "Bradesco";
+        c.agencia.numeroDaAgencia = "54321-6";
         c.saldo = 4000;
         c.limite = 10000;
         double valor;
         int escolha2 = 5;
         while(escolha2 != 0){
+            cout << "Quantidade de contas: " << c.quantidadeContas << endl;
+            cout << "Quantidade de clientes: " << clC.quantidadeClientes << endl;
             cout << "Digite a ação que quer fazer: " << endl;
             cout << "1-para sacar" << endl;
             cout << "2-para depositar" << endl;
