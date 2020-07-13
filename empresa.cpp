@@ -25,6 +25,7 @@ empresa::empresa(){
     cout << "Empresa " << getNome() << " criada com sucesso" << endl;
 }
 empresa::~empresa(){
+    delete[] Funcionarios;
 }
 
 void empresa::setNome(string nome){
