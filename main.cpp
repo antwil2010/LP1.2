@@ -4,6 +4,7 @@
 #include <iostream>
 #include "carro.h"
 #include "conta.h"
+#include "fila.h"
 
 using namespace std;
 
@@ -117,6 +118,8 @@ int main(){
         cout << "Bem-vindo ao banco" << endl;
         Cliente clC;
         Cliente clD;
+        ClientePJ pjA;
+        ClientePJ pjB;
         clC.nome = "João";
         clD.nome = "Maria";
         Conta a(clC);
@@ -135,6 +138,12 @@ int main(){
         c.agencia.numeroDaAgencia = "54321-6";
         c.saldo = 4000;
         c.limite = 10000;
+        fila<Cliente> FilaCliente(2);
+        fila<ClientePJ> FilaClientePJ(2);
+        FilaCliente.push(clC);
+        FilaCliente.push(clD);
+        FilaClientePJ.push(pjA);
+        FilaClientePJ.push(pjB);
         double valor;
         int escolha2 = 5;
         while(escolha2 != 0){

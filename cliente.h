@@ -8,10 +8,25 @@
 
 using namespace std;
 
+class ClientePJ{
+private:
+    string RazaoSocial;
+    string cnpj;
+
+public:
+    ClientePJ();
+    ~ClientePJ();
+    void setRazaoSocial(string RazaoSocial);
+    string getRazaoSocial();
+    void setcnpj(string cnpj);
+    string getcnpj();
+
+};
+
 class Cliente{
 public:
     string nome;
-    int cpf;
+    string cpf;
     static int quantidadeClientes;
 
     Cliente();
